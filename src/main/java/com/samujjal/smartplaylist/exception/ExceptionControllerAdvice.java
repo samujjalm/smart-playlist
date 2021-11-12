@@ -27,8 +27,8 @@ public class ExceptionControllerAdvice extends ResponseEntityExceptionHandler {
         ServiceError serviceError = ServiceError.from(exception);
         switch (exception.getErrorCode()) {
             case LYRICS_NOT_FOUND:
-                return ResponseEntity.status(NOT_FOUND).body(serviceError);
             case NO_MATCHING_SONGS:
+                return ResponseEntity.status(NOT_FOUND).body(serviceError);
             case PLAYLIST_NOT_FOUND:
                 return ResponseEntity.status(BAD_REQUEST).body(serviceError);
             default:

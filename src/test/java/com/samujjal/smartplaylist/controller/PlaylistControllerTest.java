@@ -52,7 +52,7 @@ class PlaylistControllerTest {
         when(playlistService.createPlaylist(lyricsSearchQuery))
                 .thenThrow(new PlaylistServiceException(ErrorCode.NO_MATCHING_SONGS, "", ""));
         mockMvc.perform(post(API_BASE_PATH_V1).param("searchString", lyricsSearchQuery).contentType(APPLICATION_JSON))
-                .andExpect(status().isBadRequest())
+                .andExpect(status().isNotFound())
                 .andExpect(content().contentType(APPLICATION_JSON))
                 .andExpect(
                         content().json("{\n" +
