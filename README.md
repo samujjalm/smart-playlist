@@ -61,13 +61,11 @@ ______________________
 
 ## Important files
 ______________________
-1. Weather: A rest controller which takes the requests and directs them to underlying code.
-2. DataAggServiceImpl: Contains application logic. Takes in list of weather data from Open Weather API and aggregates them
+1. PlaylistController: A rest controller which takes the requests and directs them to underlying code.
+2. PlaylistService: Contains application logic. Runs orchestration with MusixMatch Service
 3. application.properties: Contains configuration like api baseurl, app id and measurement units
-4. pom.xml: Maven file to contain dependencies and stuff
-5. RestControllerExceptionHandler: Controller Advice
-6. TrackTime: Annotation (AOP) to print time taken to execute a method
-7. EhCacheConfig: EhCache config
+4. build.gradle: Gradle file containing dependencies
+5. ExceptionControllerAdvice: handles REST API exception responses
 
 ## Added Implementation:
 ______________________
@@ -83,15 +81,4 @@ For further reference, please consider the following sections:
 * [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.6/gradle-plugin/reference/html/#build-image)
 * [Spring Web](https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#boot-features-developing-web-applications)
 
-### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-
-### Additional Links
-These additional references should also help you:
-
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
