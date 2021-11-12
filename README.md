@@ -6,6 +6,9 @@ ______________________
 3. IntelliJ (or any other IDE of your choice)
 4. Application will run at port:8080 - please make sure the port is not in use.
 
+
+![Architecture diagram](https://i.ibb.co/HP7HkVQ/Perpetua.png)
+
 ## Program Execution:
 _______________________
 
