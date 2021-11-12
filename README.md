@@ -9,6 +9,15 @@ ______________________
 
 ![Architecture diagram](https://i.ibb.co/HP7HkVQ/Perpetua.png)
 
+## Program Execution Easy Way if you have Docker Installed:
+_______________________
+
+1. Extract/Download the contents of the codebase to your local system.
+2. Using any command line tool, navigate to the directory where you have extracted/downloaded the codebase.
+3. Use the following command to rebuild the application: 'docker-compose up --build'
+
+#### **OPEN http://localhost:8080/api-doc.html**
+
 ## Program Execution:
 _______________________
 

@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  smart-playlist:
+    image: smart-playlist
+    container_name: smart-playlist
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
