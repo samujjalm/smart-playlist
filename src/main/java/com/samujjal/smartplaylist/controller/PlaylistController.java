@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +26,7 @@ import javax.validation.constraints.NotBlank;
 @Slf4j
 @Validated
 @RestController
-@RequestMapping("/api/v1/playlists")
+@RequestMapping(value = "/api/v1/playlists")
 @RequiredArgsConstructor
 public class PlaylistController {
     @Autowired
@@ -56,7 +57,7 @@ public class PlaylistController {
             @ApiResponse(responseCode = "503",
                     description = "Playlist service encountered a temporary internal error",
                     content = @Content(schema = @Schema(implementation = ServiceError.class)))})
-    @PostMapping("/{playlistId}/next")
+    @PutMapping("/{playlistId}/next")
     public ResponseEntity<Song> playNextSong(
             @PathVariable("playlistId") String playlistId,
             @Parameter(description = "Track ID", example = "35254943")

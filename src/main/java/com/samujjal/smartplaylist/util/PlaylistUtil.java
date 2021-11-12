@@ -5,6 +5,7 @@ import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class PlaylistUtil {
+    private PlaylistUtil(){}
     public static String generateRandomQuery(String trackLyrics, int wordsInQuery) {
         if(trackLyrics != null){
             trackLyrics = trackLyrics.replaceAll("\\*", "")
@@ -26,7 +27,7 @@ public class PlaylistUtil {
         String[] chosenWords = new String[wordsInQuery];
         int counter = 0;
         while (counter < wordsInQuery){
-            int randomNum = ThreadLocalRandom.current().nextInt(0, cleansedLyrics.length);
+            int randomNum = ThreadLocalRandom.current().nextInt(0, cleansedLyrics.length-1);
             if(!wordIndexSelected.contains(randomNum)){
                 chosenWords[counter] = cleansedLyrics[randomNum];
                 wordIndexSelected.add(randomNum);
