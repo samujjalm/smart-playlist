@@ -12,9 +12,9 @@ ______________________
 ## Program Execution Easy Way if you have Docker Installed:
 _______________________
 
-1. Extract/Download the contents of the codebase to your local system.
+1. Extract/Download the contents of the codebase to your local system by git zip download or clone.
 2. Using any command line tool, navigate to the directory where you have extracted/downloaded the codebase.
-3. Use the following command to rebuild the application: 'docker-compose up --build'
+3. Use the following command to run the application: 'docker-compose up --build'. Make sure port 8080 is available.
 
 #### **OPEN http://localhost:8080/api-doc.html**
 
